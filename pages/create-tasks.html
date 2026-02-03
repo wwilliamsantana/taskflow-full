@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/create-task.css">
+  <title>TaskFlow</title>
+</head>
+<body>
+    <header>
+    <h2>TaskFlow</h2>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./list-tasks.html" >Minhas Tarefas</a>
+      <a href="./create-tasks.html" class="active">Criar Tarefa</a>
+      <a href="./profile.html">Perfil</a>
+    </nav>
+
+    <section class="create-task" id="criar-tarefa">
+      <h3>Criar nova tarefa</h3>
+
+      <form class="task-form" action="#" method="post" novalidate>
+        <label for="title">Título</label>
+        <input id="title" name="title" type="text" placeholder="Digite o título da tarefa" required>
+
+        <label for="subtitle">Subtítulo</label>
+        <input id="subtitle" name="subtitle" type="text" placeholder="Ex: Projeto, descrição curta (opcional)">
+
+        <fieldset class="urgency-fieldset">
+          <legend>Grau de urgência</legend>
+          <label><input type="radio" name="urgency" value="high" checked> Alta</label>
+          <label><input type="radio" name="urgency" value="medium"> Média</label>
+          <label><input type="radio" name="urgency" value="low"> Baixa</label>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary">Criar tarefa</button>
+          <a href="./list-tasks.html" class="btn secondary">Cancelar</a>
+        </div>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>

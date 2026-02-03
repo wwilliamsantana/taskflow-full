@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/list-task.css">
+  <title>Taskflow | Lista de tarefas</title>
+</head>
+<body>
+  <header>
+    <h2>TaskFlow</h2>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./list-tasks.html" class="active" >Minhas Tarefas</a>
+      <a href="./create-tasks.html">Criar Tarefa</a>
+      <a href="./profile.html">Perfil</a>
+    </nav>
+
+    <section class="tasks-section" id="minhas-tarefas">
+      <div class="tasks-header">
+        <h3>Minhas Tarefas</h3>
+        <form class="task-search" role="search" aria-label="Buscar tarefas">
+          <input type="search" placeholder="Buscar por título ou projeto..." aria-label="Buscar tarefas">
+        </form>
+      </div>
+
+      <ul class="task-list">
+        <li class="task">
+          <div class="task-main">
+            <strong class="task-title">Preparar relatório mensal</strong>
+            <span class="task-meta">Projeto A</span>
+          </div>
+          <div class="task-actions">
+            <span class="urgency">Alta</span>
+            <a href="#editar-1" class="edit-link">Editar</a>
+          </div>
+        </li>
+
+        <li class="task">
+          <div class="task-main">
+            <strong class="task-title">Atualizar documentação</strong>
+            <span class="task-meta">Projeto B</span>
+          </div>
+          <div class="task-actions">
+            <span class="urgency">Média</span>
+            <a href="#editar-2" class="edit-link">Editar</a>
+          </div>
+        </li>
+
+        <li class="task">
+          <div class="task-main">
+            <strong class="task-title">Reunião com time</strong>
+            <span class="task-meta">Projeto C</span>
+          </div>
+          <div class="task-actions">
+            <span class="urgency">Baixa</span>
+            <a href="#editar-3" class="edit-link">Editar</a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

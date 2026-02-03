@@ -1,0 +1,182 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #faedcd;
+  color: #333;
+}
+
+header {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-bottom: 1px solid #d4a373;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a{
+  font-size: 14px;
+  margin-left: 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+main h3{
+  font-size: 22px;
+  margin-bottom: 20px;
+  margin-top: 3rem;
+  color: #333;
+}
+
+
+.dashboard-nav{
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.dashboard-nav a{
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  background: transparent;
+  transition: all 0.15s ease;
+  border: 1px solid transparent;
+}
+
+.dashboard-nav a:hover{
+  background: #f0e6d8;
+  border-color: rgba(212,163,115,0.25);
+}
+
+.dashboard-nav a.active{
+  background: #d4a373;
+  color: #fff;
+  box-shadow: 0 2px 6px rgba(34,34,34,0.06);
+}
+
+.dashboard-nav a:focus{
+  outline: 2px solid rgba(212,163,115,0.28);
+  outline-offset: 3px;
+}
+
+/* --- Formulário Criar Tarefa --- */
+.create-task{
+  max-width: 720px;
+  margin: 20px auto 40px;
+  padding: 0 18px;
+}
+
+.create-task h3{
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #333;
+}
+
+.task-form{
+  border: 1px solid #d4a373;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(34,34,34,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-form label{
+  font-weight: 700;
+  font-size: 14px;
+  color: #333;
+}
+
+.task-form input[type="text"],
+.task-form textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d4a373;
+  background: transparent;
+  font-size: 14px;
+}
+
+.task-form textarea{ 
+  min-height: 100px; 
+  resize: vertical; 
+}
+
+.urgency-fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.urgency-fieldset legend{ 
+  font-weight:700; 
+  margin-right:6px; 
+  color:#333; 
+}
+
+.urgency-fieldset label{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #d4a373;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.urgency-fieldset input[type="radio"]{ 
+  accent-color: #d4a373; 
+}
+
+.form-actions{
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.btn{
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn.primary{ background: #d4a373; color: #fff; }
+.btn.secondary{ background: transparent; color: #333; border: 1px solid rgba(34,34,34,0.06); }
+
+.btn:hover{ transform: translateY(-1px); transition: all 0.12s ease; }
+
+@media (max-width: 600px){
+  .form-actions{ flex-direction: column; align-items: stretch; }
+  .btn{ width: 100%; }
+}

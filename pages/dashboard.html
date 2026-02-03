@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/dashboard.css">
+  <title>TaskFlow | Dashboard</title>
+</head>
+<body>
+  <header>
+    <h2>TaskFlow</h2>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <a href="./dashboard.html" class="active">Dashboard</a>
+      <a href="./list-tasks.html">Minhas Tarefas</a>
+      <a href="./create-tasks.html">Criar Tarefa</a>
+      <a href="./profile.html">Perfil</a>
+    </nav>
+
+    <h3>Bem-vindo ao seu Dashboard, John Doe!</h3>
+
+    <section class="summary-cards">
+      <div class="card">
+        <h4>Tarefas Pendentes</h4>
+        <p>12</p>
+      </div>
+      <div class="card">
+        <h4>Tarefas Concluídas</h4>
+        <p>34</p>
+      </div>
+      <div class="card">
+        <h4>Projetos Ativos</h4>
+        <p>5</p>
+      </div>
+       <div class="card">
+        <h4>Projetos Atrasados</h4>
+        <p>5</p>
+      </div>
+    </section>
+
+
+    <section class="progress-chart">
+      <h4>Progresso das Tarefas</h4>
+      <div class="progress-wrapper" aria-label="Progresso das tarefas">
+        <div class="progress-info">
+          <span class="progress-label">Tarefas concluídas</span>
+          <span class="progress-percent">68%</span>
+        </div>
+
+        <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68">
+          <div class="progress-fill" style="width: 68%;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

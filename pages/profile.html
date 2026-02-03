@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/profile.css">
+  <title>TaskFlow | Perfil</title>
+</head>
+<body>
+      <header>
+    <h2>TaskFlow</h2>
+    <nav>
+      <a href="../index.html">Início</a>
+      <a href="../index.html">Logout</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="dashboard-nav" aria-label="Dashboard navigation">
+      <a href="./dashboard.html">Dashboard</a>
+      <a href="./list-tasks.html" >Minhas Tarefas</a>
+      <a href="./create-tasks.html" >Criar Tarefa</a>
+      <a href="./profile.html" class="active">Perfil</a>
+    </nav>
+
+    <section class="profile" id="perfil">
+      <div class="profile-card">
+        <div class="avatar" aria-hidden="true"><span>JD</span></div>
+
+        <div class="profile-info">
+          <h3>John Doe</h3>
+          <p class="email">john.doe@example.com</p>
+          <p class="bio">Product manager apaixonado por criar fluxos de trabalho eficientes e experiência do usuário clara. Gosta de organizar tarefas, priorizar e acompanhar progresso.</p>
+
+          <div class="profile-actions">
+            <a href="#editar-perfil" class="btn primary">Editar Perfil</a>
+            <a href="#alterar-senha" class="btn secondary">Alterar senha</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-stats" aria-hidden="true">
+        <div class="stat">
+          <span class="stat-num">46</span>
+          <span class="stat-label">Tarefas Concluídas</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">12</span>
+          <span class="stat-label">Tarefas Pendentes</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Projetos</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
