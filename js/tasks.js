@@ -2,16 +2,50 @@
 (function () {
   'use strict';
 
+  function getTasksKey() {
+    try {
+      const user = JSON.parse(localStorage.getItem('currentUser') || 'null');
+      if (!user) return null;
+      const id = user.id || user.email || user.username || user.name;
+      if (!id) return null;
+      return `tasks:${id}`;
+    } catch (e) {
+      return null;
+    }
+  }
+
   function getTasks() {
     try {
-      return JSON.parse(localStorage.getItem('tasks') || '[]');
+      const key = getTasksKey();
+      if (!key) return [];
+
+      const raw = localStorage.getItem(key);
+      // migrate legacy global tasks into user-specific key if present and user key is empty
+      if (!raw || raw === '[]') {
+        const legacy = localStorage.getItem('tasks');
+        if (legacy && legacy !== '[]') {
+          try {
+            localStorage.setItem(key, legacy);
+            localStorage.removeItem('tasks');
+            return JSON.parse(legacy);
+          } catch (e) { /* ignore migration errors */ }
+        }
+      }
+
+      return JSON.parse(raw || '[]');
     } catch (e) {
       return [];
     }
   }
 
   function saveTasks(tasks) {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
+    const key = getTasksKey();
+    if (!key) {
+      // no user: do not persist user-specific tasks globally; fallback to global for legacy support
+      localStorage.setItem('tasks', JSON.stringify(tasks));
+      return;
+    }
+    localStorage.setItem(key, JSON.stringify(tasks));
   }
 
   function createTask({ title, subtitle, urgency }) {
@@ -232,7 +266,7 @@
   renderDashboard();
 
   window.addEventListener('storage', (e) => {
-    if (e.key === 'tasks' || e.key === 'currentUser') {
+    if ((e.key && e.key.startsWith && e.key.startsWith('tasks')) || e.key === 'currentUser') {
       renderDashboard();
       if (tasksList) renderTasks(searchInput ? searchInput.value.trim() : '');
     }
@@ -241,10 +275,16 @@
   const originalSave = localStorage.setItem.bind(localStorage);
   localStorage.setItem = function (key, value) {
     originalSave(key, value);
-    if (key === 'tasks' || key === 'currentUser') {
+    if ((key && key.startsWith && key.startsWith('tasks')) || key === 'currentUser') {
       renderDashboard();
       if (tasksList) renderTasks(searchInput ? searchInput.value.trim() : '');
     }
   };
+
+  // expose helper functions so other scripts (e.g. dashboard/profile) can call them safely
+  try {
+    window.getTasks = getTasks;
+    window.renderTasks = renderTasks;
+  } catch (e) {}
 
 })();

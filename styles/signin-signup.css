@@ -93,16 +93,6 @@ main>a{
   font-size: 12px;
 }
 
-
-/* a {
-  text-decoration: none;
-  color: #d4a373;
-  font-weight: bold;
-  text-align: center;
-  display: block;
-  margin-top: 10px;
-}*/
-
 main>a:hover {
   text-decoration: underline;
 } 
