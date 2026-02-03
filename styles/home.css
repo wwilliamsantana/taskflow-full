@@ -81,3 +81,63 @@ main {
   font-weight: bold;
 }
 
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+  header{
+    padding: 8px 14px;
+  }
+  nav{
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  nav a{
+    margin-left: 8px;
+    padding: 6px 8px;
+  }
+
+  main{
+    padding: 12px;
+  }
+
+  .sc-one{
+    margin: 6rem 0;
+    padding: 0 6px;
+  }
+
+  .sc-two,
+  .sc-three{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sc-two>ul,
+  .sc-three>div{
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  header{ margin: 12px auto; }
+  nav a{ font-size: 13px; }
+  .sc-one{ margin: 4rem 0; }
+  .sc-one>h1{ font-size: 28px; }
+
+  .sc-two, .sc-three{
+    display: block;
+  }
+
+  .sc-two>ul, .sc-three>div{
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .sc-three>div a, .sc-two ul span{
+    margin-left: 0;
+  }
+
+  .sc-two>ul{
+    margin-left: 0;
+  }
+}
+
+
