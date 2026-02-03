@@ -1,83 +1,4 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-body{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #faedcd;
-  color: #333;
-}
-
-header {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 10px 20px;
-  border-bottom: 1px solid #d4a373;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav a{
-  font-size: 14px;
-  margin-left: 15px;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
-main {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-main h3{
-  font-size: 22px;
-  margin-bottom: 20px;
-  margin-top: 3rem;
-  color: #333;
-}
-
-
-.dashboard-nav{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
-  align-items: center;
-}
-
-.dashboard-nav a{
-  text-decoration: none;
-  color: #333;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-weight: 600;
-  background: transparent;
-  transition: all 0.15s ease;
-  border: 1px solid transparent;
-}
-
-.dashboard-nav a:hover{
-  background: #f0e6d8;
-  border-color: rgba(212,163,115,0.25);
-}
-
-.dashboard-nav a.active{
-  background: #d4a373;
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(34,34,34,0.06);
-}
-
-.dashboard-nav a:focus{
-  outline: 2px solid rgba(212,163,115,0.28);
-  outline-offset: 3px;
-}
+/* Dashboard Styles */
 
 .summary-cards{
   display: grid;
@@ -107,7 +28,7 @@ main h3{
 }
 
 .progress-chart{
-  border: 1px solid rgba(212,163,115,0.2);
+  border: 1px solid #d4a373;
   border-radius: 10px;
   padding: 18px;
   box-shadow: 0 6px 14px rgba(34,34,34,0.04);
@@ -151,7 +72,7 @@ main h3{
 .progress-bar{
   width:100%;
   height:18px;
-  background: linear-gradient(90deg, #f0e6d8, #f7f1e7);
+  background: #fff0e0;
   border-radius: 999px;
   overflow:hidden;
   border:1px solid rgba(212, 115, 115, 0.6);
