@@ -52,10 +52,60 @@
   box-shadow: 0 6px 14px rgba(34,34,34,0.04);
 }
 
+
 .task-main{
   display:flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.task-main>div{
+  display:flex;
   flex-direction:column;
-  gap: 4px;
+}
+
+.task-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark  {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  border-radius: 16px;
+}
+
+.task-checkbox input:checked + .checkmark  {
+  border-color: #9b9a9a;
+  background-color: #d4a373;
+}
+
+.edit-btn{
+  background: transparent;
+  border: 1px solid #d4a373;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #d4a373;
+  transition: all 0.12s ease;
+}
+
+.delete-btn{
+  background: transparent;
+  border: 1px solid #ff0000;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #ff0000;
+  transition: all 0.12s ease;
 }
 
 .task-title{

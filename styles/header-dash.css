@@ -30,6 +30,17 @@ nav a{
   font-weight: bold;
 }
 
+/* Logout button (used instead of anchor) */
+nav .logout-btn{
+  font-size: 13px;
+  margin-left: 15px;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 main {
   max-width: 1200px;
   margin: 20px auto;
